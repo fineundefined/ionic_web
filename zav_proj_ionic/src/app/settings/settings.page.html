@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile Settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!--Menu Button-->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Name -->
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]="user.name" placeholder="Enter your name"></ion-input>
+    </ion-item>
+
+    <!-- Login/email -->
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]="user.email" placeholder="Enter your email" type="email"></ion-input>
+    </ion-item>
+
+    <!-- Password -->
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input [(ngModel)]="user.password" placeholder="Enter new password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="updateProfile()">Save Changes</ion-button>
+  <ion-button expand="block" color="danger" (click)="deleteAccount()">Delete Account</ion-button>
+</ion-content>

@@ -1,0 +1,25 @@
+
+ion-card img {
+max-width: 100%; 
+height: auto; 
+object-fit: cover; 
+border-radius: 8px; 
+}
+
+.card-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Автоадаптация колонок */
+gap: 16px; 
+padding: 16px; 
+}
+
+ion-card {
+max-width: 100%; 
+height: auto;
+}
+
+.logo{
+    max-width: 2%;
+    max-height: auto;
+}
+

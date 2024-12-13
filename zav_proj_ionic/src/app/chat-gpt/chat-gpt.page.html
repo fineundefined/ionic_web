@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ChatGPT</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!--Menu Button-->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let message of messages" class="message">
+    <ion-card [color]="message.IsUserMessage ? 'medium' : 'light'" [class.user]="message.User">
+      <ion-card-header>
+        <ion-card-subtitle>{{message.User}}</ion-card-subtitle>
+        <ion-card-title>{{ message.text }}</ion-card-title>
+        
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+ 
+</ion-content >
+<ion-footer>
+  <div class="input-bar"style="display: flex; align-items: center; padding: 0 8px;">
+    <ion-input shape="round"
+      fill="outline"
+      [(ngModel)]="currentMessage" 
+      placeholder="Ask me something" 
+      (keyup.enter)="sendMessage()"
+      style="flex: 1; margin-right: 8px;">
+    </ion-input>
+    <ion-button size="default" color="success" shape="round" (click)="sendMessage()" type="submit">Send</ion-button>
+  </div>
+</ion-footer>

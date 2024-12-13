@@ -1,0 +1,56 @@
+.news-container {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: flex-start; /* Расположение карточек сверху */
+    height: 100%; /* Занимаем всю высоту экрана */
+    padding: 20px;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку при необходимости */
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 20px; /* Расстояние между карточками */
+    max-width: 800px; /* Максимальная ширина сетки */
+    width: 100%; /* Занимает всю ширину экрана до max-width */
+  }
+  
+  
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  ion-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  ion-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  ion-card-subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  ion-card-content {
+    font-size: 16px;
+    line-height: 1.5;
+    
+  }
+  
+  ion-button {
+    margin-top: 10px;
+  }
+
+  ion-content{
+    --background: linear-gradient(135deg, rgba(143, 222, 255, 0.1), rgba(221, 0, 255, 0.2));
+  }
+  

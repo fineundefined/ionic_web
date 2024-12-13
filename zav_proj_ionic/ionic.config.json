@@ -1,0 +1,7 @@
+{
+  "name": "zav_proj_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
